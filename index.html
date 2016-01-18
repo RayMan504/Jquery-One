@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery One</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>jQuery One</h1>
+    <section>
+      <ul>
+        <li>You will code in this index.html file, save and refresh to see the results of your work.</li>
+        <li><a href="directions.html" target="_blank">Directions...</a></li>
+      </ul>
+    </section>
+    
+    <div id="everything">
+        <h1>A heading!</h1>
+        <p>Here's some text!</p>
+        <p>Here's a second set of text!</p>
+        <div class="holder">
+            <ul>
+                <li>List Item 1</li>
+                <li id = "ListItem2">List Item 2</li>
+                <li>List Item 3</li>
+            </ul>
+        </div>
+        <div class="holder">
+            <ul>
+                <li>List Item 4</li>
+                <li>List Item 5</li>
+                <li>List Item 6</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+ 
+  </div>
+  <script src ="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script> 
+  var allDivs = $("allDivs");
+  var allUls = $("allUls");
+  $('p').css('text', 'blue');
+  $('.container').css('background-color', 'white');
+  $('.container').append("<div>Goodbye</div>");
+  $('.container').prepend("<div>Hello</div>");
+  $('body').prepend('<div>Body prepend</div>');
+  $('body').append("<div>Body append</div>");
+  window.colors = ['red', 'salmon', 'red', 'blue', 'yellow'];
+  setInterval(function(){
+      if(!this.counter) {
+          this.counter = 0;
+      }
+      $('body').css('background-color',window.colors[this.counter%4]);
+      this.counter++;
+  }, 500);
+  
+  </script>
+</body>
+
+</html>
